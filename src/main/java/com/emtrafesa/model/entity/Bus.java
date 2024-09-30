@@ -29,6 +29,7 @@ public class Bus {
     @Column(name ="numero_pisos")
     private int numeroPisos;
 
+    //se crean dos arreglos
     @ElementCollection
     @CollectionTable(name = "asientos_por_piso", joinColumns = @JoinColumn(name = "bus_id"))
     @MapKeyColumn(name = "piso")

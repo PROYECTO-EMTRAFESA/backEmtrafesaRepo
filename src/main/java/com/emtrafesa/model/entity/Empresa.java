@@ -27,6 +27,7 @@ public class Empresa {
     @Column(name = "telefono", nullable = false)
     private String telefono;
 
+
     @Column(name = "correo",length = 180, nullable = false, unique = true)
     private String correo;
 }
