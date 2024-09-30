@@ -18,7 +18,7 @@ public class Bus {
 
     @Column(name = "placa", nullable = false, unique = true)
     private String placa;
-
+//llamamos enum
     @Enumerated(EnumType.STRING)
     @Column(name ="tipo_servicio", nullable = false)
     private TipoServicio servicio;
