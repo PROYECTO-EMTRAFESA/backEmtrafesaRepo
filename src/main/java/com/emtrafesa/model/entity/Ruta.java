@@ -23,9 +23,6 @@ public class Ruta {
     @Column(name = "destino", nullable = false)
     private String destino;
 
-    @Column(name = "duracion", length = 20, nullable = false) // Puede ser un texto que describa la duración (ej: "4h 30min")
-    private LocalTime duracion;
-
     @Column(name = "tiene_escalas", nullable = false)
     private Boolean tieneEscalas;
 

@@ -33,10 +33,10 @@ VALUES
     ON CONFLICT DO NOTHING;
 
 -- Insertando datos en la tabla Ruta
-INSERT INTO ruta (origen, destino, duracion, tiene_escalas, empleado_id)
+INSERT INTO ruta (origen, destino, tiene_escalas, empleado_id)
 VALUES
-    ('Lima', 'Trujillo', '05:30:00', FALSE, 1),
-    ('Lima', 'Arequipa', '12:00:00', TRUE, 1)
+    ('Lima', 'Trujillo',  FALSE, 1),
+    ('Lima', 'Arequipa',  TRUE, 1)
     ON CONFLICT DO NOTHING;
 
 -- Insertando datos en la tabla Itinerario
