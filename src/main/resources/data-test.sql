@@ -98,4 +98,32 @@ VALUES
     (2, 2, 20)  -- Bus con id 2, piso 2, 20 asientos
     ON CONFLICT DO NOTHING;
 
+-- Para el bus con placa 'ABC-123' (ID = 1)
+INSERT INTO asiento (numero_asiento, estado, piso, bus_id)
+VALUES
+    (1, 'DISPONIBLE', 1, 1),
+    (2, 'DISPONIBLE', 1, 1),
+    (3, 'DISPONIBLE', 1, 1),
+    (4, 'DISPONIBLE', 2, 1),
+    (5, 'DISPONIBLE', 2, 1),
+    (6, 'DISPONIBLE', 2, 1)
+    ON CONFLICT DO NOTHING;
+
+-- Para el bus con placa 'XYZ-987' (ID = 2)
+INSERT INTO asiento (numero_asiento, estado, piso, bus_id)
+VALUES
+    (1, 'DISPONIBLE', 1, 2),
+    (2, 'DISPONIBLE', 1, 2),
+    (3, 'DISPONIBLE', 1, 2),
+    (4, 'DISPONIBLE', 2, 2),
+    (5, 'DISPONIBLE', 2, 2),
+    (6, 'DISPONIBLE', 2, 2)
+    ON CONFLICT DO NOTHING;
+
+-- Insertando datos en la tabla HistorialPago
+INSERT INTO historial_pago (cliente_id, pasaje_id, monto_pagado, metodo_pago, fecha_pago, estado_pago, transaccion_id)
+VALUES
+    (1, 1, 120.50, 'YAPE', CURRENT_TIMESTAMP, 'PAGADO', 'TXN12345'),
+    (2, 2, 150.75, 'TARJETA', CURRENT_TIMESTAMP, 'PAGADO', 'TXN98765')
+    ON CONFLICT DO NOTHING;
 

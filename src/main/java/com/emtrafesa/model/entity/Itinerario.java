@@ -9,7 +9,9 @@ import java.util.Date;
 
 @Data
 @Entity
-@Table(name = "itinerario")
+@Table(name = "itinerario", indexes = {
+        @Index(name = "idx_origen_destino_fecha", columnList = "origen, destino, fecha_viaje")
+})
 public class Itinerario {
 
     @Id

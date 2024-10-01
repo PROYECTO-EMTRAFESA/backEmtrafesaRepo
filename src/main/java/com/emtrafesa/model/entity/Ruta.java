@@ -8,7 +8,9 @@ import java.util.List;
 
 @Data
 @Entity
-@Table(name = "ruta")
+@Table(name = "ruta", indexes = {
+        @Index(name = "idx_origen_destino", columnList = "origen, destino")
+})
 public class Ruta {
 
     @Id
